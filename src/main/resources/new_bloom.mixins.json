@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "gay.avturtle.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ChickenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

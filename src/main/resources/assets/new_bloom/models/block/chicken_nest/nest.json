@@ -1,0 +1,79 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/thin_block",
+	"render_type": "cutout",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "new_bloom:block/chicken_nest",
+		"particle": "block/hay_block_top"
+	},
+	"elements": [
+		{
+			"name": "Bottom",
+			"from": [3, 0, 3],
+			"to": [13, 0.1, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [5, 4, 7.5, 4.125], "texture": "#1"},
+				"up": {"uv": [5, 5, 0, 0], "texture": "#1"},
+				"down": {"uv": [5, 0, 0, 5], "texture": "#1", "cullface": "down"}
+			}
+		},
+		{
+			"name": "SideWest",
+			"from": [0, 0, 0],
+			"to": [4, 0, 16],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [4, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 1, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"up": {"uv": [2, 15, 0, 7], "texture": "#1"},
+				"down": {"uv": [2, 7, 0, 15], "texture": "#1"}
+			}
+		},
+		{
+			"name": "SideEast",
+			"from": [12, 0, 0],
+			"to": [16, 0, 16],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [12, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 1, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"up": {"uv": [2, 15, 0, 7], "texture": "#1"},
+				"down": {"uv": [2, 7, 0, 15], "texture": "#1"}
+			}
+		},
+		{
+			"name": "SideSouth",
+			"from": [0, 0, 12],
+			"to": [16, 0, 16],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 0, 12]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 1, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 1, 0], "texture": "#1"},
+				"up": {"uv": [8, 7, 0, 5], "texture": "#1"},
+				"down": {"uv": [8, 5, 0, 7], "texture": "#1"}
+			}
+		},
+		{
+			"name": "SideNorth",
+			"from": [0, 0, 0],
+			"to": [16, 0, 4],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 0, 4]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"east": {"uv": [0, 0, 1, 0], "texture": "#1"},
+				"south": {"uv": [0, 0, 4, 0], "texture": "#1"},
+				"west": {"uv": [0, 0, 1, 0], "texture": "#1"},
+				"up": {"uv": [8, 7, 0, 5], "texture": "#1"},
+				"down": {"uv": [8, 5, 0, 7], "texture": "#1"}
+			}
+		}
+	]
+}

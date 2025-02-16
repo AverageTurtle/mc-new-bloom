@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "new_bloom:block/chicken_nest/nest"
+  }
+}

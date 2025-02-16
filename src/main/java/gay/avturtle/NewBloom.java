@@ -1,5 +1,8 @@
 package gay.avturtle;
 
+import gay.avturtle.blocks.ChickenNest;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.PushReaction;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -18,18 +21,19 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.slf4j.LoggerFactory;
 
 @Mod(NewBloom.MODID)
 public class NewBloom
 {
     public static final String MODID = "new_bloom";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
    
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
-    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
-    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block", EXAMPLE_BLOCK);
+    public static final DeferredBlock<Block> CHICKEN_NEST = BLOCKS.registerBlock("chicken_nest", ChickenNest::new, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).sound(SoundType.GRASS).randomTicks().noOcclusion().noCollission().pushReaction(PushReaction.DESTROY));
+    public static final DeferredItem<BlockItem> CHICKEN_NEST_ITEM = ITEMS.registerSimpleBlockItem("chicken_nest", CHICKEN_NEST);
 
     public NewBloom(IEventBus modEventBus, ModContainer modContainer)
     {
@@ -37,8 +41,6 @@ public class NewBloom
 
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
-
-        //NeoForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -51,7 +53,9 @@ public class NewBloom
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-            event.accept(EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
+            event.accept(CHICKEN_NEST_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS)
+            event.accept(CHICKEN_NEST_ITEM);
     }
 }

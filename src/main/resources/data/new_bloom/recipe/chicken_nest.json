@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": "minecraft:wheat"
+  },
+  "pattern": [
+    "W W",
+    " W "
+  ],
+  "result": {
+    "id": "new_bloom:chicken_nest",
+    "count": 1
+  }
+}

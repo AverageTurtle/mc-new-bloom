@@ -1,0 +1,74 @@
+{
+    "multipart": [
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/nest"
+        }
+      },
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/egg_north_east"
+        },
+        "when": {
+          "north_east": "filled"
+        }
+      },
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/egg_north_east_fertile"
+        },
+        "when": {
+          "north_east": "fertilized"
+        }
+      },
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/egg_north_west"
+        },
+        "when": {
+          "north_west": "filled"
+        }
+      },
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/egg_north_west_fertile"
+        },
+        "when": {
+          "north_west": "fertilized"
+        }
+      },
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/egg_south_east"
+        },
+        "when": {
+          "south_east": "filled"
+        }
+      },
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/egg_south_east_fertile"
+        },
+        "when": {
+          "south_east": "fertilized"
+        }
+      },
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/egg_south_west"
+        },
+        "when": {
+          "south_west": "filled"
+        }
+      },
+      {
+        "apply": {
+          "model": "new_bloom:block/chicken_nest/egg_south_west_fertile"
+        },
+        "when": {
+          "south_west": "fertilized"
+        }
+      }
+    ]
+
+}

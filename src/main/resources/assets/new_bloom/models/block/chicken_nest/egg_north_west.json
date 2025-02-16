@@ -1,0 +1,23 @@
+{
+  "texture_size": [32, 32],
+  "textures": {
+    "1": "new_bloom:block/chicken_nest",
+    "particle": "block/hay_block_top"
+  },
+  "elements": [
+    {
+      "name": "Egg_NW",
+      "from": [4.6, 0.1, 5.3],
+      "to": [6.6, 3.1, 7.3],
+      "rotation": {"angle": 0, "axis": "y", "origin": [-0.4, 0, -0.3]},
+      "faces": {
+        "north": {"uv": [14, 1, 13, 2.5], "texture": "#1"},
+        "east": {"uv": [15, 1, 14, 2.5], "texture": "#1"},
+        "south": {"uv": [16, 1, 15, 2.5], "texture": "#1"},
+        "west": {"uv": [13, 1, 12, 2.5], "texture": "#1"},
+        "up": {"uv": [13, 1, 14, 0], "texture": "#1"},
+        "down": {"uv": [14, 0, 15, 1], "texture": "#1"}
+      }
+    }
+  ]
+}
