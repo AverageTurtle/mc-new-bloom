@@ -1,5 +1,4 @@
 {
-  "itemGroup.new_bloom": "Example Mod Tab",
-  "block.new_bloom.example_block": "Example Block",
-  "item.new_bloom.example_item": "Example Item"
+  "block.new_bloom.example_block": "Example Block"
+
 }
