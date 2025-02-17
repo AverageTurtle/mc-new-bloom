@@ -12,7 +12,6 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -31,10 +30,11 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class ChickenNest extends Block  {
+
     public enum EggSlot implements StringRepresentable {
         EMPTY("empty"),
-        @SuppressWarnings("unused") FILLED("filled"),
-        @SuppressWarnings("unused") FERTILIZED("fertilized");
+        FILLED("filled"),
+        FERTILIZED("fertilized");
         private final String name;
 
         EggSlot(String name) {

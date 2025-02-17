@@ -1,6 +1,8 @@
 package gay.avturtle;
 
 import gay.avturtle.blocks.ChickenNest;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.material.PushReaction;
 import org.slf4j.Logger;
@@ -35,6 +37,8 @@ public class NewBloom
     public static final DeferredBlock<Block> CHICKEN_NEST = BLOCKS.registerBlock("chicken_nest", ChickenNest::new, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).sound(SoundType.GRASS).randomTicks().noOcclusion().noCollission().pushReaction(PushReaction.DESTROY));
     public static final DeferredItem<BlockItem> CHICKEN_NEST_ITEM = ITEMS.registerSimpleBlockItem("chicken_nest", CHICKEN_NEST);
 
+    public static final DeferredItem<Item> FRIED_EGG = ITEMS.registerSimpleItem("fried_egg", new Item.Properties().food(new FoodProperties(3, 7, false)));
+
     public NewBloom(IEventBus modEventBus, ModContainer modContainer)
     {
         modEventBus.addListener(this::commonSetup);
@@ -57,5 +61,8 @@ public class NewBloom
             event.accept(CHICKEN_NEST_ITEM);
         if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS)
             event.accept(CHICKEN_NEST_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.accept(FRIED_EGG);
+        }
     }
 }

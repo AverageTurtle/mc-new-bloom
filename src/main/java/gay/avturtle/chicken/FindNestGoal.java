@@ -33,6 +33,8 @@ public class FindNestGoal extends MoveToBlockGoal {
     @Override
     protected boolean isValidTarget(LevelReader level, BlockPos pos) {
         ChunkAccess chunkaccess = level.getChunk(SectionPos.blockToSectionCoord(pos.getX()), SectionPos.blockToSectionCoord(pos.getZ()), ChunkStatus.FULL, false);
+        if(chunkaccess != null && chunkaccess.getBlockState(pos).is(TARGET_BLOCK))
+            NewBloom.LOGGER.info(String.valueOf(ChickenNest.hasFreeSlot(chunkaccess.getBlockState(pos))));
         return chunkaccess != null && chunkaccess.getBlockState(pos).is(TARGET_BLOCK) && ChickenNest.hasFreeSlot(chunkaccess.getBlockState(pos));
     }
 
